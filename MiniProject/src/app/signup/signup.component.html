@@ -1,0 +1,31 @@
+<h1>Fios Sign Up</h1>
+
+<form (ngSubmit)="onSubmit()">
+    <br/>
+    <div class="form-group">
+     <label>First Name:</label><input type="first" class="form-control" id="first" required name="first"/>
+    </div>
+     <br/>
+     <div class="form-group">
+     <label>Last Name:</label><input type="last" class="form-control" id="last" required name="last"/>
+     </div>
+     <br/>
+    <div class="form-group">
+     <label>Address:</label><input type="address" class="form-control" id="address" required name="address"/>
+    </div>
+     <br/>
+     <div class="form-group">
+     <label>Phone:</label><input type="phone" class="form-control" id="phone" required name="phone"/>
+     </div>
+     <br/>
+     <div class="form-group">
+     <label>Services:</label><input
+     name="services" id="services" type="checkbox" value="Cable">Cable TV <input name="services" id="services" type="checkbox"
+     value="Internet">Internet <input name="services" id="services" type="checkbox"
+     value="Voice">Voice
+     </div>
+     <br/>
+
+     <button type="button" class="btn btn-primary" type="submit" value="submit">Submit</button>
+     
+ </form>
