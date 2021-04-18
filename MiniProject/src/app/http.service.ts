@@ -10,11 +10,11 @@ export class HttpService {
 
   constructor(private http:HttpClient) { }
 
-  getSub(value:any): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${value.id}`);
+  getSub(value:Number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${value}`);
   }
 
   postSub(value:any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/${value.id}`, value);
+    return this.http.post(`${this.baseUrl}/${value}`, value);
   }
 }

@@ -1,12 +1,9 @@
 <h1>Fios Sign Up</h1>
 
-<form (ngSubmit)="onSubmit()">
     <br/>
-    <div class="form-group">
-     <label>Enter Customer ID:</label><input type="number" class="form-control" id="id" required name="id"/>
-    </div>
-     <br/>
+<div class="form-group">
+     <label>Enter Customer ID:</label><input type="number" class="form-control" id="id" required name="id" [(ngModel)]="inputId"/>
+</div>
+<br/>
 
-     <button type="button" class="btn btn-primary" type="submit" value="submit">Submit</button>
-     
- </form>
+<button type="button" class="btn btn-primary" type="submit" value="submit" (click)="onSubmit()">Submit</button>

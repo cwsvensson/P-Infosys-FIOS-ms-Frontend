@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/http.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
   submitted = false;
+  inputId : String;
 
-  constructor() { }
+  constructor(private hs:HttpService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +18,9 @@ export class SignupComponent implements OnInit {
   onSubmit(){
     console.log('in onSubmit');
     this.submitted = true;
+    this.hs.getSub(Number(this.inputId)).subscribe(data => 
+      {
+        console.log(data);
+      });
   }
 }
