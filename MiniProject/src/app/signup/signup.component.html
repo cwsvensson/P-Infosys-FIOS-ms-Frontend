@@ -1,30 +1,50 @@
-<h1>Fios Sign Up</h1>
+<body>
+    <div class="heading">
+        <h2>Fios Customer Look Up</h2>
+    </div>
 
     <br/>
-<div class="form-group">
-     <label>Enter Customer ID:</label><input type="number" class="form-control" id="id" required name="id" [(ngModel)]="inputId"/>
-</div>
-<p id="info"></p>
-<br/>
-<div id="dataTable" style="display: none;">
-    <table>
-        <tr>
-            <th>{{Data.name}}</th>
-            <th>{{Data.id}}</th>
-        </tr>
-        <tr>
-            <th>Cable Subscription</th>
-            <th>{{Data.cableSubscribed}}</th>
-        </tr>
-        <tr>
-            <th>Internet Subscription</th>
-            <th>{{Data.internetSubscribed}}</th>
-        </tr>
-        <tr>
-            <th>Phone Subscription</th>
-            <th>{{Data.phoneSubscribed}}</th>
-        </tr>
-    </table>
+    <div class="center">
+        <input type="number" class="centerChild" id="id" required name="id" [(ngModel)]="inputId" placeholder="Please Enter a Customer ID"/>
+        <p>Customer ID</p>
+    </div>
+    <p id="info"></p>
+    <br/>
 
-</div>
-<button type="button" class="btn btn-primary" type="submit" value="submit" (click)="onSubmit()">Submit</button>
+    <div class="center">
+        <button type="button" class=".centerChild" type="submit" value="submit" (click)="onSubmit()">Look Up</button>
+    </div>
+
+    <div id="dataTable0" class="center" style="display: none;">
+        <table class="centerChild">
+            <tr class="tableHeading">
+                <th>Name</th>
+                <th>Id</th>
+            </tr>
+            <tr>
+                <th>{{Data.name}}</th>
+                <th>{{Data.id}}</th>
+            </tr>
+        </table>
+    </div>
+    <div id="dataTable1" class="center" style="display: none;">
+        <table class="centerChild">
+            <tr class="tableHeading">
+                <th>Subscription</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <th>Cable Subscription</th>
+                <th>{{Data.cableSubscribed}}</th>
+            </tr>
+            <tr>
+                <th>Internet Subscription</th>
+                <th>{{Data.internetSubscribed}}</th>
+            </tr>
+            <tr>
+                <th>Phone Subscription</th>
+                <th>{{Data.phoneSubscribed}}</th>
+            </tr>
+        </table>
+    </div>
+</body>

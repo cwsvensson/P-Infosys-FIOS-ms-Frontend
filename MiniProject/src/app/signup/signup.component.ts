@@ -33,7 +33,8 @@ export class SignupComponent implements OnInit {
         if(data.phoneSubscribed) {this.Data.phoneSubscribed = "Active"}
         else{this.Data.phoneSubscribed = "Inactive"}
         //document.getElementById("info").innerHTML = data.id + " " + data.name + " " + data.cableSubscribed + " " + data.internetSubscribed + " " + data.phoneSubscribed;
-        document.getElementById("dataTable").style.display = "flex";
+        document.getElementById("dataTable0").style.display = "flex";
+        document.getElementById("dataTable1").style.display = "flex";
         console.log(data);
       });
   }
