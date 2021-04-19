@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
     this.submitted = true;
     this.hs.getSub(Number(this.inputId)).subscribe(data => 
       {
+        document.getElementById("info").innerHTML = data.id + " " + data.name + " " + data.cableSubscribed + " " + data.internetSubscribed + " " + data.phoneSubscribed;
         console.log(data);
       });
   }
