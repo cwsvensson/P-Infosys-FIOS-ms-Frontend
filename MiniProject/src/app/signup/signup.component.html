@@ -6,5 +6,25 @@
 </div>
 <p id="info"></p>
 <br/>
+<div id="dataTable" style="display: none;">
+    <table>
+        <tr>
+            <th>{{Data.name}}</th>
+            <th>{{Data.id}}</th>
+        </tr>
+        <tr>
+            <th>Cable Subscription</th>
+            <th>{{Data.cableSubscribed}}</th>
+        </tr>
+        <tr>
+            <th>Internet Subscription</th>
+            <th>{{Data.internetSubscribed}}</th>
+        </tr>
+        <tr>
+            <th>Phone Subscription</th>
+            <th>{{Data.phoneSubscribed}}</th>
+        </tr>
+    </table>
 
+</div>
 <button type="button" class="btn btn-primary" type="submit" value="submit" (click)="onSubmit()">Submit</button>

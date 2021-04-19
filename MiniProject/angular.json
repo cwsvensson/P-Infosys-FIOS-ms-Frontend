@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "mini-project"
+  "defaultProject": "mini-project",
+  "cli": {
+    "analytics": false
+  }
 }
