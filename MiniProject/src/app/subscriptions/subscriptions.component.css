@@ -1,0 +1,16 @@
+.tableHeading{
+    background-color: #3366AA;
+    color: white;
+}
+
+
+.center {
+    margin: auto;
+    width: 50%;
+  }
+
+.centerChild{
+    display: block;
+    margin : 0 auto;
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+<h1>Fios Login</h1>
+
+<div class="center">
+    <input type="text" [(ngModel)]="username" placeholder="Please Enter Your Username"/>
+    <p>Username</p>
+    <p>Don't have an account. Please register <a href="register">Here</a>.</p>
+</div>
+
+<div class="center">
+    <input type="text" [(ngModel)]="password" placeholder="Please Enter Your Password"/>
+    <p>Password</p>
+</div>
+
+<button (click)="login_clicked()">Login</button>

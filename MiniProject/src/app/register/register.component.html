@@ -1,0 +1,23 @@
+<h1>Register</h1>
+
+<div class="center">
+    <input type="text" [(ngModel)]="firstname" placeholder="Please Enter Your First Name"/>
+    <p>First Name</p>
+</div>
+
+<div class="center">
+    <input type="text" [(ngModel)]="lastname" placeholder="Please Enter Your Last Name"/>
+    <p>Last Name</p>
+</div>
+
+<div class="center">
+    <input type="text" [(ngModel)]="username" placeholder="Please Enter Your Username"/>
+    <p>Username</p>
+</div>
+
+<div class="center">
+    <input type="password" [(ngModel)]="password" placeholder="Please Enter Your Password"/>
+    <p>Password</p>
+</div>
+
+<button (click)="register_clicked()">Register</button>
