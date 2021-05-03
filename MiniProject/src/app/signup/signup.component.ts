@@ -20,6 +20,8 @@ export class SignupComponent implements OnInit {
  public Data: any = {id: Number, name: String, cableSubscribed: String, internetSubscribed: String, phoneSubscribed: String};
 
   onSubmit(){
+    document.getElementById("dataTable0").style.display = "none";
+    document.getElementById("dataTable1").style.display = "none";
     console.log('in onSubmit');
     this.submitted = true;
     this.hs.getSub(Number(this.inputId)).subscribe(data => 
