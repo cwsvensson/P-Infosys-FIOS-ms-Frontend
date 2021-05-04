@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerServiceService } from '../services/customer-service.service';
 import { FiosServiceService } from '../services/fios-service.service';
 
@@ -11,7 +12,7 @@ export class SubscriptionsComponent implements OnInit {
 
   public subscriptions : any;
 
-  constructor(private accountService : CustomerServiceService, private service : FiosServiceService) 
+  constructor(private accountService : CustomerServiceService, private service : FiosServiceService, private router: Router) 
   { 
     service.getSubscriptions(accountService.getCurrentUser().username).subscribe((response) => {
       this.subscriptions = response;
@@ -24,11 +25,10 @@ export class SubscriptionsComponent implements OnInit {
 
   unsubscribeCable() : void{
     var subscription = {"id" : `${this.subscriptions[0].id}`, "name" : this.subscriptions[0].plan };
-    console.log(subscription);
-    console.log(this.service.deleteCableSubscription(subscription));
+    //console.log(subscription);
+    //console.log(this.service.deleteCableSubscription(subscription));
     this.service.deleteCableSubscription(subscription).subscribe(response => {
-      console.log(response);
-      //this.subscriptions[0] = null;
+      this.subscriptions[0] = null;
     })
   }
 
@@ -42,5 +42,10 @@ export class SubscriptionsComponent implements OnInit {
     this.service.deletePhoneSubscription({ "id" : this.subscriptions[2].id, "name" : this.subscriptions[2].plan }).subscribe((response) => {
       this.subscriptions[2] = null;
     })
+  }
+
+  navigateToAddSub() : void{
+    console.log("navigateToAddSub");
+    this.router.navigate(['/add-subscription']);
   }
 }

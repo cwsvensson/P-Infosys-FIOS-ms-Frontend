@@ -24,15 +24,15 @@ export class FiosServiceService {
   }
 
   deleteCableSubscription(subscription): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/cable`, subscription);
+    return this.http.delete(`${this.baseUrl}/cable/${subscription.id}`, subscription);
   }
 
   deleteInternetSubscription(subscription): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/internet`, subscription);
+    return this.http.delete(`${this.baseUrl}/internet/${subscription.id}`, subscription);
   }
 
   deletePhoneSubscription(subscription): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/phone`, subscription);
+    return this.http.delete(`${this.baseUrl}/phone${subscription.id}`, subscription);
   }
 
   getSubscriptions(username): Observable<any> {
