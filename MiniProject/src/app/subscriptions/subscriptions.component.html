@@ -9,23 +9,23 @@
             <th>Plan</th>
             <th>Price</th>
         </tr>
-        <tr>
+        <tr *ngIf="subscriptions && subscriptions[0] != null">
             <th>Cable Subscription</th>
-            <th>None</th>
+            <th>{{(subscriptions && subscriptions[0] != null) ? subscriptions[0].plan : ""}}</th>
             <th>$0.00</th>
-            <button>Unsubscribe</button>
+            <button (click)="unsubscribeCable()">Unsubscribe</button>
         </tr>
-        <tr>
+        <tr *ngIf="subscriptions && subscriptions[1] != null">
             <th>Internet Subscription</th>
-            <th>None</th>
+            <th>{{(subscriptions && subscriptions[1] != null) ? subscriptions[1].plan : ""}}</th>
             <th>$0.00</th>
-            <button>Unsubscribe</button>
+            <button (click)="unsubscribeInternet()">Unsubscribe</button>
         </tr>
-        <tr>
+        <tr *ngIf="subscriptions && subscriptions[2] != null">
             <th>Phone Subscription</th>
-            <th>None</th>
+            <th>{{(subscriptions && subscriptions[2] != null) ? subscriptions[2].plan : ""}}</th>
             <th>$0.00</th>
-            <button>Unsubscribe</button>
+            <button (click)="unsubscribePhone()">Unsubscribe</button>
         </tr>
     </table>
 </div>
