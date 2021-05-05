@@ -1,6 +1,7 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/http.service';
+import { CustomerServiceService } from '../services/customer-service.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,9 @@ export class SignupComponent implements OnInit {
   submitted = false;
   inputId : String;
 
-  constructor(private hs:HttpService) { }
+  public name:String;
+
+  constructor(private hs:HttpService, private cs:CustomerServiceService) { }
 
   ngOnInit(): void {
     
@@ -20,7 +23,6 @@ export class SignupComponent implements OnInit {
  public Data: any = {id: Number, name: String, cableSubscribed: String, internetSubscribed: String, phoneSubscribed: String};
 
   onSubmit(){
-    document.getElementById("dataTable0").style.display = "none";
     document.getElementById("dataTable1").style.display = "none";
     console.log('in onSubmit');
     this.submitted = true;
@@ -35,7 +37,6 @@ export class SignupComponent implements OnInit {
         if(data.phoneSubscribed) {this.Data.phoneSubscribed = "Active"}
         else{this.Data.phoneSubscribed = "Inactive"}
         //document.getElementById("info").innerHTML = data.id + " " + data.name + " " + data.cableSubscribed + " " + data.internetSubscribed + " " + data.phoneSubscribed;
-        document.getElementById("dataTable0").style.display = "flex";
         document.getElementById("dataTable1").style.display = "flex";
         console.log(data);
       });

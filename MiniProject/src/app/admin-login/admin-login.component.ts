@@ -20,9 +20,9 @@ export class AdminLoginComponent implements OnInit {
 
   login(){
     this.adminService.login({"username": this.username, "password": this.password}).subscribe(response => {
-      console.log(response);
       this.adminService.setCurrentAdmin(response);
-      this.router.navigate(['/fioslookuppage']);
+      if (response != null)
+        this.router.navigate(['/fioslookuppage']);
     });
   }
 

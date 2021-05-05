@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     this.service.login({"username" : this.username, "password" : this.password}).subscribe(response => {
       console.log(response);
       this.service.setCurrentUser(response);
-      this.router.navigate(['/mysubscriptions']);
+      if (response != null)
+        this.router.navigate(['/mysubscriptions']);
     });
     
   }
