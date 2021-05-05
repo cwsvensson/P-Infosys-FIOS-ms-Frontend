@@ -4,11 +4,13 @@ import { AddSubscriptionComponent } from './add-subscription/add-subscription.co
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SignupComponent } from './signup/signup.component';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 
 const routes: Routes = [  
   { path: 'login', component: LoginComponent },
   { path: 'adminLogin', component: AdminLoginComponent},
+  { path: 'fioslookuppage', component: SignupComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'mysubscriptions', component: SubscriptionsComponent },
   { path: 'add-subscription', component: AddSubscriptionComponent },];
