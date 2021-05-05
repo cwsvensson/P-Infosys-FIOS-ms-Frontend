@@ -1,23 +1,33 @@
-<h1>Register</h1>
+<div class="sidedec">
+    <div class="service-info">
+       <h2>Verizon<br> FIOS</h2>
+       <p>Welcome! Please register here.</p>
+    </div>
+ </div>
+ <div class="fillbox">
+    <div class="col-md-6 col-sm-12">
+       <div>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="firstname">
+             </div>
 
-<div class="center">
-    <input type="text" [(ngModel)]="firstname" placeholder="Please Enter Your First Name"/>
-    <p>First Name</p>
-</div>
+             <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="lastname">
+             </div>
 
-<div class="center">
-    <input type="text" [(ngModel)]="lastname" placeholder="Please Enter Your Last Name"/>
-    <p>Last Name</p>
-</div>
-
-<div class="center">
-    <input type="text" [(ngModel)]="username" placeholder="Please Enter Your Username"/>
-    <p>Username</p>
-</div>
-
-<div class="center">
-    <input type="password" [(ngModel)]="password" placeholder="Please Enter Your Password"/>
-    <p>Password</p>
-</div>
-
-<button (click)="register_clicked()">Register</button>
+             <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
+             </div>
+             <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+             </div>
+             <button type="submit" class="btn btn-black"><a href="login">Login</a></button>
+             <button type="submit" class="btn btn-secondary" (click)="register_clicked()">Register</button>
+          
+       </div>
+    </div>
+ </div>

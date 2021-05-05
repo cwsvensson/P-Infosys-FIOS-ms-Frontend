@@ -1,0 +1,35 @@
+
+.fillbox{
+    margin-left: 40%; 
+}
+
+
+.sidedec {
+    height: 100%;
+    background-color: rgb(32, 108, 170);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidedec{
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
+.service-info{
+    padding: 60px;
+    color: #fff;
+} 
+
+.service-info h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
