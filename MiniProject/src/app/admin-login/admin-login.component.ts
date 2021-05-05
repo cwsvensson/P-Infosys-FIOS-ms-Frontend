@@ -22,7 +22,7 @@ export class AdminLoginComponent implements OnInit {
     this.adminService.login({"username": this.username, "password": this.password}).subscribe(response => {
       console.log(response);
       this.adminService.setCurrentAdmin(response);
-      this.router.navigate(['/FIOS_LOOKUP']);
+      this.router.navigate(['/fioslookuppage']);
     });
   }
 

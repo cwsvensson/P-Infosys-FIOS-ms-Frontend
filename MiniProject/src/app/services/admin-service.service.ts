@@ -13,12 +13,8 @@ export class AdminServiceService {
   constructor(private http: HttpClient) { }
 
   login(adminCreds): Observable<any>{
-    return this.http.post(`${this.url}/adminLogin`, adminCreds);
+    return this.http.post(`${this.url}/login`, adminCreds);
 
-  }
-
-  register(admin): Observable<any>{
-    return this.http.post(`${this.url}/`, admin);
   }
 
   getCurrentAdmin(){
