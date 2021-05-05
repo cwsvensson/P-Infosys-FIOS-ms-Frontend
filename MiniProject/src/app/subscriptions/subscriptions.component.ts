@@ -57,7 +57,7 @@ export class SubscriptionsComponent implements OnInit {
   }
 
   calculateFee() : void{
-    if (this.subscriptions && this.subscriptions[0] != null)
+    if (this.subscriptions && this.subscriptions[0] != null && this.subscriptions[0].id !=-1)
     {
       this.cableFee = 25.55;
       if (this.subscriptions[0].plan === "basic")
@@ -70,7 +70,7 @@ export class SubscriptionsComponent implements OnInit {
     else
       this.cableFee = 0;
 
-      if (this.subscriptions && this.subscriptions[1] != null)
+      if (this.subscriptions && this.subscriptions[1] != null && this.subscriptions[1].id !=-1)
       {
         this.internetFee = 35.55;
         if (this.subscriptions[1].plan === "basic")
@@ -83,7 +83,7 @@ export class SubscriptionsComponent implements OnInit {
       else
         this.internetFee = 0;
 
-        if (this.subscriptions && this.subscriptions[2] != null)
+        if (this.subscriptions && this.subscriptions[2] != null && this.subscriptions[2].id !=-1)
         {
           this.phoneFee = 15.55;
           if (this.subscriptions[2].plan === "basic")

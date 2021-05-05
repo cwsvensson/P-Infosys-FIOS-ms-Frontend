@@ -13,19 +13,27 @@ export class RegisterComponent implements OnInit {
   public username : String;
   public password : String;
 
+  public error : boolean;
+
   constructor(private service : CustomerServiceService) { }
 
   ngOnInit(): void {
   }
 
   register_clicked(){
-    this.service.register({
-      "firstName" : this.firstname,
-      "lastName" : this.lastname,
-      "username" : this.username,
-      "password" : this.password
-  }).subscribe(response => {
-      console.log(response);
-    });
+    if (!this.firstname || !this.lastname || !this.username || !this.password)
+      this.error = true;
+    
+    else 
+    {
+      this.service.register({
+        "firstName" : this.firstname,
+        "lastName" : this.lastname,
+        "username" : this.username,
+        "password" : this.password
+      }).subscribe(response => {
+        console.log(response);
+      });
+    }
   }
 }
