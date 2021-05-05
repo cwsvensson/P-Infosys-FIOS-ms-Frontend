@@ -1,0 +1,59 @@
+h2{
+    text-align: center;
+}
+
+.heading{
+    
+    width: 95%;
+    color: white;
+    background-color:  #3366AA;
+}
+
+input{
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+button{
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    background-color: #3366AA;
+    color: white;
+    font-weight: bold;
+}
+
+div{
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+.tableHeading{
+    background-color: #3366AA;
+    color: white;
+}
+
+
+.center {
+    margin: auto;
+    width: 50%;
+  }
+
+.centerChild{
+    display: block;
+    margin : 0 auto;
+    text-align: center;
+}

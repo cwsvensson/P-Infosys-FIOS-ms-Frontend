@@ -1,16 +1,26 @@
-<h1>Subscribe</h1>
+<div class="heading">
+    <h1>Add New Plan</h1>
+</div>
 
-<select name="service" [(ngModel)]="service">
-    <option value="cable">Cable</option>
-    <option value="internet">Internet</option>
-    <option value="phone">Phone</option>
-</select>
-<br/>
-<select name="plan" [(ngModel)]="plan">
-    <option value="basic">Basic</option>
-    <option value="premium">Premium</option>
-    <option value="unlimited">Umlimited</option>
-</select>
+
+<div class="center">
+    <select name="service" style="width: 200px;" [(ngModel)]="service">
+        <option value="cable">Cable</option>
+        <option value="internet">Internet</option>
+        <option value="phone">Phone</option>
+    </select>
+    <p>Service</p>
+    <br/><br/><br/><br/><br/>
+    <select name="plan" style="width: 200px;" [(ngModel)]="plan">
+        <option value="basic">Basic</option>
+        <option value="premium">Premium</option>
+        <option value="unlimited">Umlimited</option>
+    </select>
+    <p>Plan</p>
+</div>
+
 <br/>
 
-<button (click)="subscribe()">Subscribe</button>
+<div class="center">
+    <button (click)="subscribe()">Subscribe</button>
+</div>

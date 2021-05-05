@@ -32,7 +32,7 @@ export class FiosServiceService {
   }
 
   deletePhoneSubscription(subscription): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/phone${subscription.id}`, subscription);
+    return this.http.delete(`${this.baseUrl}/phone/${subscription.id}`, subscription);
   }
 
   getSubscriptions(username): Observable<any> {

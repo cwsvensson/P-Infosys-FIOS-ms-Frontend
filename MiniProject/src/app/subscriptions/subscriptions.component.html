@@ -1,6 +1,12 @@
-<h1>My Subscriptions</h1>
 
-<button (click)="navigateToAddSub()">Add New Plan</button>
+<div class="heading">
+    <h1>My Subscriptions</h1>
+</div>
+
+<div class="center">
+    <button (click)="navigateToAddSub()">Add/Edit Plan</button>
+</div>
+
 
 <div id="dataTable1" class="center">
     <table class="centerChild">
@@ -8,24 +14,35 @@
             <th>Subscription</th>
             <th>Plan</th>
             <th>Price</th>
+            <th>Action</th>
         </tr>
         <tr *ngIf="subscriptions && subscriptions[0] != null">
             <th>Cable Subscription</th>
             <th>{{(subscriptions && subscriptions[0] != null) ? subscriptions[0].plan : ""}}</th>
-            <th>$0.00</th>
-            <button (click)="unsubscribeCable()">Unsubscribe</button>
+            <th>{{cableFee | currency}}</th>
+            <div style="padding: 20px;"><button class="center" style="width: 300px" (click)="unsubscribeCable()">Unsubscribe</button></div>
         </tr>
         <tr *ngIf="subscriptions && subscriptions[1] != null">
             <th>Internet Subscription</th>
             <th>{{(subscriptions && subscriptions[1] != null) ? subscriptions[1].plan : ""}}</th>
-            <th>$0.00</th>
-            <button (click)="unsubscribeInternet()">Unsubscribe</button>
+            <th>{{internetFee | currency}}</th>
+            <div style="padding: 20px;"><button class="center" style="width: 300px" (click)="unsubscribeInternet()">Unsubscribe</button></div>
         </tr>
         <tr *ngIf="subscriptions && subscriptions[2] != null">
             <th>Phone Subscription</th>
             <th>{{(subscriptions && subscriptions[2] != null) ? subscriptions[2].plan : ""}}</th>
-            <th>$0.00</th>
-            <button (click)="unsubscribePhone()">Unsubscribe</button>
+            <th>{{phoneFee | currency}}</th>
+            <div style="padding: 20px;"><button class="center" style="width: 300px" (click)="unsubscribePhone()">Unsubscribe</button></div>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th></th>
+            <th>{{(cableFee + internetFee + phoneFee) | currency}}</th>
+            
         </tr>
     </table>
+</div>
+
+<div class="center">
+    <p style="font-size: 22pt;">Your total is {{(cableFee + internetFee + phoneFee) | currency}} per month</p>
 </div>
