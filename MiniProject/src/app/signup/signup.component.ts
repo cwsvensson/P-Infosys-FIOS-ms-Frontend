@@ -23,12 +23,13 @@ export class SignupComponent implements OnInit {
  public Data: any = {id: Number, name: String, cableSubscribed: String, internetSubscribed: String, phoneSubscribed: String};
 
   onSubmit(){
-    document.getElementById("dataTable1").style.display = "none";
-    console.log('in onSubmit');
+    //document.getElementById("dataTable1").style.display = "none";
     this.submitted = true;
     this.hs.getSub(Number(this.inputId)).subscribe(data => 
       {
-        this.Data.id = data.id;
+        console.log(data);
+        document.getElementById("xslt-display").innerHTML = data.body;
+        /*this.Data.id = data.id;
         this.Data.name = data.name;
         if(data.cableSubscribed) {this.Data.cableSubscribed = "Active"}
         else{this.Data.cableSubscribed = "Inactive"}
@@ -38,7 +39,7 @@ export class SignupComponent implements OnInit {
         else{this.Data.phoneSubscribed = "Inactive"}
         //document.getElementById("info").innerHTML = data.id + " " + data.name + " " + data.cableSubscribed + " " + data.internetSubscribed + " " + data.phoneSubscribed;
         document.getElementById("dataTable1").style.display = "flex";
-        console.log(data);
+        console.log(data);*/
       });
   }
 }
